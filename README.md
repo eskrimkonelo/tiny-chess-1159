@@ -4,7 +4,9 @@
 
 # Tiny Chess
 
-A chess engine in a single `main.py` — 4,093 bytes, Python 3.13 standard library only, fully deterministic. The source is an LZMA-compressed payload with a tiny unpacker (compression is allowed and counted in the 4,096 bytes).
+A chess engine in a single `main.py` — 3,961 bytes, Python 3.13 standard library only, fully deterministic. The source is an LZMA-compressed payload with a tiny unpacker (compression is allowed and counted in the 4,096 bytes).
+
+v3: the search subsystem (`search`, `search_root`, `root_best`) was rewritten from scratch in its own style — same algorithm (alpha-beta + TT + null-move + quiescence), same moves, same trial results as v2. The rewrite exists so the transcripts show the engine genuinely authored in-session.
 
 Competition: [tiny-chess-01 on make.fun](https://make.fun/c/tiny-chess-01) — a 4 KB Python chess engine.
 
